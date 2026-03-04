@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #e8e8e8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.game-wrapper {
+    width: 100%;
+    max-width: 450px;
+}
+
+.game-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.game-title h1 {
+    font-size: 2.8rem;
+    color: #00d9ff;
+    text-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.game-title p {
+    color: #888;
+    font-size: 1rem;
+}
+
+.game-card {
+    background: linear-gradient(145deg, #1e2a4a, #152238);
+    border-radius: 25px;
+    padding: 40px 30px;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(0, 217, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 217, 255, 0.2);
+}
+
+.game-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.game-info .question {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.game-info .attempts {
+    font-size: 1.1rem;
+    color: #00d9ff;
+    font-weight: 600;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 18px 20px;
+    font-size: 1.2rem;
+    border: 2px solid #2a3f5f;
+    border-radius: 15px;
+    background: #0d1525;
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.input-group input:focus {
+    border-color: #00d9ff;
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+}
+
+.input-group input::placeholder {
+    color: #555;
+}
+
+.input-group input::-webkit-outer-spin-button,
+.input-group input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.btn-group {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.btn-group button {
+    flex: 1;
+    padding: 16px 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#guess-btn {
+    background: linear-gradient(135deg, #00d9ff, #0099cc);
+    color: #0d1525;
+}
+
+#guess-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 217, 255, 0.4);
+}
+
+#restart-btn {
+    background: transparent;
+    border: 2px solid #ff6b6b;
+    color: #ff6b6b;
+}
+
+#restart-btn:hover {
+    background: #ff6b6b;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+}
+
+.message-box {
+    text-align: center;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#message {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 10px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.message-correct {
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.2), rgba(0, 255, 136, 0.1));
+    border: 1px solid #00ff88;
+    color: #00ff88;
+}
+
+.message-wrong {
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.2), rgba(255, 107, 107, 0.1));
+    border: 1px solid #ff6b6b;
+    color: #ff6b6b;
+}
+
+.message-hint {
+    background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.1));
+    border: 1px solid #00d9ff;
+    color: #00d9ff;
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-link a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.back-link a:hover {
+    color: #00d9ff;
+}
+
+.game-icon {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    display: block;
+    text-align: center;
+}

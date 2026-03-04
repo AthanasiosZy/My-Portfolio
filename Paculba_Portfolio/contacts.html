@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="Header">
+        <h1>My Portfolio</h1>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="About.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="contacts.html">Contacts</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="contact-header">
+            <h1>Get In Touch</h1>
+        </section>
+        
+        <section class="contact-container">
+            <a href="#" id="emailLink" class="contact-card">
+                <span class="contact-icon">📧</span>
+                <span class="contact-label">Email</span>
+                <span class="contact-info">paculba.ojcarlo@gmail.com</span>
+            </a>
+            
+            <a href="https://www.facebook.com/carlo.paculba.5" target="_blank" class="contact-card">
+                <span class="contact-icon">📘</span>
+                <span class="contact-label">Facebook</span>
+                <span class="contact-info">OJ Carlo Paculba</span>
+            </a>
+            
+            <a href="https://www.instagram.com/carlo_zyg?igsh=MTdxeGtkNmYyMDZycA==" target="_blank" class="contact-card">
+                <span class="contact-icon">📷</span>
+                <span class="contact-label">Instagram</span>
+                <span class="contact-info">@carlo_zyg</span>
+            </a>
+            
+            <a href="tel:+639123456789" class="contact-card">
+                <span class="contact-icon">📱</span>
+                <span class="contact-label">Phone</span>
+                <span class="contact-info">+63 912 345 6789</span>
+            </a>
+        </section>
+    </main>
+
+    <!-- Email Modal -->
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeEmailModal()">&times;</span>
+            <h2>Send Me an Email</h2>
+            <form action="mailto:paculba.ojcarlo@gmail.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="senderName">Your Name</label>
+                    <input type="text" id="senderName" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="senderEmail">Your Email</label>
+                    <input type="email" id="senderEmail" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="senderMessage">Message</label>
+                    <textarea id="senderMessage" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Send via Email</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="contacts.js"></script>
+
+    <footer>
+        <p>&copy; 2026 OJ Carlo Paculba. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
